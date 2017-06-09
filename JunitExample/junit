@@ -1,0 +1,34 @@
+                                                                    JUnit Class
+
+Unit testing:-  Unit testing is a level of software testing where individual units/code of a software are tested.
+
+Junit is an Unit testing framework.
+ Junit 3 --> Strictly typed
+ Junit 4 --> Advanced, less strictly typed.
+
+ JUnit --> XUnit
+                ---NUnit  --> asp
+                ---PyUnit --> python
+                ---JUnit  --> Java
+----------------------------------------------------------------------------------------------------------
+JUnit 3
+----------------------------------------------------------------------------------------------------------
+ YOu have to extend TestCase class for every test class you write
+ ClassName has to be meaningful
+ TestClass should contains Test along with className
+
+ Every method should contain test before methodName
+
+ ----------------------------------------------------------------------------------------------------------
+ JUnit 4
+ ----------------------------------------------------------------------------------------------------------
+ No need of writing extending a TestCase class
+ No need of writing  test before every method
+
+Annotations: Form of Metadata
+                  data about data
+
+Assertions : affirming statement
+                       expected value, output
+
+Thank You :)
