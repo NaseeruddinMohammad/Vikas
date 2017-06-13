@@ -32,3 +32,36 @@ Assertions : affirming statement
                        expected value, output
 
 Thank You :)
+
+--------------------------------------------------------------------------------------------------------
+
+@Ignore - which will skip the execution of particular test methods.
+
+@Before - The method which contain this annotation will executed before the execution of any valid test method in your class.
+
+@After  - The method which contain this annotation will executed after the execution of any valid test method in your class.
+
+
+JUnit3
+setup()
+teardown()
+specific methods available in JUnit 3 to implement the @Before and @After functionality.
+
+@BeforeClass - The method which contain this annotation will be the very first thing in the class
+
+@AfterClass -  The method which contain this annotation will be the very last thing in the class
+
+@Test(timeout=50) - timeout feature
+
+
+    assertEquals
+		assertNotEquals
+		assertNotNull
+		assertNull
+		assertTrue
+		assertFalse
+		assertSame
+		assertNotSame
+		assertArrayEquals
+
+Thank you :)
