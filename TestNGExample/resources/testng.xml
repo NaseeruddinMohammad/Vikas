@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="YelpAppSuite">
+
+	<test name="SmokeTest">
+		<groups>
+			<run>
+				<include name="santityTestGroup"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.test.CommonTest"></class>
+
+			<class name="com.test.HomePageTest"></class>
+		</classes>
+	</test>
+
+	<test name="FunctionalTest">
+
+		<groups>
+			<run>
+				<include name="functionalTestGroup"></include>
+			</run>
+		</groups>
+		<classes>
+
+			<class name="com.test.CommonTest"></class>
+			<class name="com.test.HomePageTest"></class>
+			<class name="com.test.LoginPageTest"></class>
+
+		</classes>
+	</test>
+</suite>

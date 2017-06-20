@@ -1,0 +1,45 @@
+                                                    Git and Maven Mock
+Q:  What is a build tool..?
+
+Ans:   Generates source code
+       compiled source code
+       Generates compile code into jar or zip file
+       installs the packaged code into local repo or central repo
+
+Q: When I did commit the code will push to central repo.? Explain...!!
+
+Ans:    So, its not correct.
+        WHenever you do a commit it will be there in local repo.
+        until and unless you used push command it will not go to central/ remote repo.
+
+Q: What is POM..? groupId and ArtifactId..?
+
+Ans: POM is Project Object Model
+        which is an xml file where your every configuration will undergo.
+        dependencies
+        plugins
+        servers
+        proxies
+
+        <project xmlns = ""gfhjjmnjk  >
+
+        <modelversion> model version </modelversion>
+        <groupId>com.wbl.main</groupId>
+        <ArtifactId>myApp</ArtifactId>
+        <version>0.1</version>
+
+       dependencies
+
+Q: What is git status and git check out..?
+
+Ans:    git status
+        git checkout <branchname>
+
+Q: What will happen you fork a repo in git hub..?
+
+Ans:
+
+
+
+Thank you... :)
+        
