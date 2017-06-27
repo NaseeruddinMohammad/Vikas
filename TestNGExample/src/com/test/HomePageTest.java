@@ -30,12 +30,13 @@ public class HomePageTest {
 		System.out.println("I'm in before method");
 	}
 	
-	@Test(groups={"santityTestGroup","functionalTestGroup"},expectedExceptions=NullPointerException.class)
-	public void verifyClickSignUp(){
+	@Test(groups={"santityTestGroup","functionalTestGroup"})
+	public void verifyClickSignUp() throws Exception{
 		assertEquals("Success",hp.clickSignUp());
+		throw new Exception();
 	}
 	
-	@Test(groups={"santityTestGroup","functionalTestGroup"},expectedExceptions=NullPointerException.class)//,expectedExceptions=SQLException.class)
+	@Test(groups={"santityTestGroup","functionalTestGroup"}, timeOut=1000)//,expectedExceptions=SQLException.class)
 	public void verifyClickLogin() {//throws SQLException{
 		assertEquals("Success",hp.clickLogin());
 		
@@ -44,6 +45,11 @@ public class HomePageTest {
 	@Test(groups = {"functionalGroupTest"})
 	public void verifySearch(){
 		assertEquals("Success",hp.doASearch());
+	}
+	
+	@Test(dependsOnGroups = {"santityTestGroup"},alwaysRun=true,invocationCount=10)
+	public void verifyAddress(){
+		System.out.println("HomePage Address");
 	}
 	
 	@AfterMethod

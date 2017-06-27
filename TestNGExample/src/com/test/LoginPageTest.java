@@ -20,8 +20,15 @@ public class LoginPageTest {
 	}
 	
 	@Test
-	public void checkLogin(){
+	public void checkLogin() throws Exception{
 		assertEquals("Success",lp.testLogin());
+		throw new Exception();
+	}
+	
+	
+	@Test(dependsOnMethods={"checkLogin"})
+	public void verifyuser(){
+		System.out.println("Login page : User verified");
 	}
 	
 	@AfterClass

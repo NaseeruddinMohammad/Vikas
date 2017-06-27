@@ -2,33 +2,36 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="YelpAppSuite">
-
+	<parameter name="input" value="hello World"></parameter>
 	<test name="SmokeTest">
-		<groups>
+		<!--  <groups>
 			<run>
 				<include name="santityTestGroup"/>
 			</run>
-		</groups>
+		</groups>  -->
 		<classes>
-			<class name="com.test.CommonTest"></class>
-
-			<class name="com.test.HomePageTest"></class>
+			<!-- <class name="com.test.CommonTest"></class>
+			<class name="com.test.HomePageTest">
+			<methods>
+			<include name="verifyAddress"></include>
+			</methods>
+			</class>
+			<class name="com.test.LoginPageTest"></class> -->
+			<class name="com.test.CountNoOfVowelsTest"></class>
 		</classes>
 	</test>
-
-	<test name="FunctionalTest">
-
-		<groups>
+	
+	<test name="FunctionalTest" enabled="false">
+		<!-- <groups>
 			<run>
 				<include name="functionalTestGroup"></include>
 			</run>
-		</groups>
+		</groups> -->
 		<classes>
 
 			<class name="com.test.CommonTest"></class>
 			<class name="com.test.HomePageTest"></class>
 			<class name="com.test.LoginPageTest"></class>
-
 		</classes>
 	</test>
 </suite>

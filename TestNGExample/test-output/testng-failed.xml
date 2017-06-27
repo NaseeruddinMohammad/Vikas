@@ -2,33 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [YelpAppSuite]">
   <test name="SmokeTest(failed)">
-    <groups>
-      <run>
-        <include name="santityTestGroup"/>
-      </run>
-    </groups>
+    <parameter name="input" value="hello World"/>
     <classes>
-      <class name="com.test.HomePageTest">
+      <class name="com.test.CountNoOfVowelsTest">
         <methods>
-          <include name="verifyClickSignUp"/>
-          <include name="verifyClickLogin"/>
+          <include name="method1"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.test.HomePageTest -->
+      </class> <!-- com.test.CountNoOfVowelsTest -->
     </classes>
   </test> <!-- SmokeTest(failed) -->
-  <test name="FunctionalTest(failed)">
-    <groups>
-      <run>
-        <include name="functionalTestGroup"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="com.test.HomePageTest">
-        <methods>
-          <include name="verifyClickSignUp"/>
-          <include name="verifyClickLogin"/>
-        </methods>
-      </class> <!-- com.test.HomePageTest -->
-    </classes>
-  </test> <!-- FunctionalTest(failed) -->
 </suite> <!-- Failed suite [YelpAppSuite] -->

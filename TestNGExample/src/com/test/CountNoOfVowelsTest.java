@@ -2,25 +2,43 @@ package com.test;
 
 import static org.testng.Assert.assertEquals;
 
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.main.CountVowels;
 
 public class CountNoOfVowelsTest {
 	
-	CountVowels cv=null;
-	public CountNoOfVowelsTest() {
-		cv =new CountVowels();
+	CountVowels cv;
+	
+	@Parameters({"input"})
+	@Test(invocationCount=10)
+	public void  test(String input){
+		System.out.println(input);
 	}
 	
-	@Test
-	public void method1(){
-		int actual = cv.CountNoOfVowels("Shanthi");
-		int expected = 2;
+	
+	/*@DataProvider(name = "inputData")
+	public Object[][] getData(){
+		return new Object[][]{{"hello",2},{"today",2},{"Hai",2}};
+	}
+*/
+	
+	@BeforeClass
+	public void beforeClass(){
+		cv = new CountVowels();
+		System.out.println("I'm in Before Class");
+	}
+
+/*	
+	@Test(dataProvider="inputData")
+	public void method1(String input,int expected){
+		int actual = cv.CountNoOfVowels(input);
 		assertEquals(actual, expected);
-	}
+	}*/
 	
-	@Test
+/*	@Test
 	public void method2(){
 		int actual = cv.CountNoOfVowels("123");
 		int expected = 0;
@@ -53,6 +71,6 @@ public class CountNoOfVowelsTest {
 		int actual = cv.CountNoOfVowels(null);
 		int expected = 0;
 		assertEquals(actual, expected);
-	}
+	}*/
 	
 }
